@@ -1,23 +1,22 @@
 import React, { useState } from "react";
-import "./App.css";
-
+//import "./App.css"
 function App() {
   const [num1, setNum1] = useState("");
   const [num2, setNum2] = useState("");
   const [operator, setOperator] = useState("+");
   const [result, setResult] = useState("");
 
-  // const handleNum1Change = (e) => {
-  //   setNum1(e.target.value);
-  // };
+  const handleNum1Change = (e) => {
+    setNum1(e.target.value);
+  };
 
-  // const handleNum2Change = (e) => {
-  //   setNum2(e.target.value);
-  // };
+  const handleNum2Change = (e) => {
+    setNum2(e.target.value);
+  };
 
-  // const handleOperatorChange = (e) => {
-  //   setOperator(e.target.value);
-  // };
+  const handleOperatorChange = (e) => {
+    setOperator(e.target.value);
+  };
 
   const handleCalculate = () => {
     const n1 = parseFloat(num1);
@@ -48,13 +47,13 @@ function App() {
           type="text"
           id="Number 1"
           value={num1}
-          onChange={(e) => setNum1(e.target.value)}
+          onChange={handleNum1Change}
         />
         <label htmlFor="operatorSelect">Operator</label>
         <select
           id="operatorSelect"
           value={operator}
-          onChange={(e) => setOperator(e.target.value)}
+          onChange={handleOperatorChange}
         >
           <option value="+">+</option>
           <option value="-">-</option>
@@ -64,11 +63,11 @@ function App() {
           type="text"
           id="Number 2"
           value={num2}
-          onChange={(e) => setNum2(e.target.value)}
+          onChange={handleNum2Change}
         />
-        <button onClick={handleCalculate}>Calculate</button>
+        <button id="button" onClick={handleCalculate}>Calculate</button>
       </div>
-      <h2>Result: {result}</h2>
+      <h2 data-testid="result" >Result: {result}</h2>
     </div>
   );
 }
