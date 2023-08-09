@@ -6,16 +6,10 @@ describe("Calculator Integration Tests", () => {
   test("performs subtraction correctly", async () => {
      
 
-<<<<<<< HEAD
 (async function testCalculatorSubtract() {
   const driver = await new Builder().forBrowser("chrome").build();
-  try {
-    await driver.get("https://git.heroku.com/learn-cicd-anthony-prod.git"); // Replace with the actual URL of your React app
-=======
-    const driver = await new Builder().forBrowser("chrome").build();
     try {
       await driver.get("https://learn-cicd-anthony-24f4f0f46557.herokuapp.com/"); // Replace with the actual URL of your React app
->>>>>>> develop
 
       await driver
       .findElement(By.id("Number 1"))
@@ -42,40 +36,4 @@ describe("Calculator Integration Tests", () => {
     }
   });
 });
-
-
-
-
-// (async function testCalculatorSubtract() {
-//   const driver = await new Builder().forBrowser("chrome").build();
-//   try {
-//     await driver.get("https://learn-cicd-anthony-24f4f0f46557.herokuapp.com/"); // Replace with the actual URL of your React app
-
-//     await driver
-//       .findElement(By.css('input[placeholder="Number 1"]'))
-//       .sendKeys("10");
-//     await driver.findElement(By.css("select")).sendKeys("-");
-//     await driver
-//       .findElement(By.css('input[placeholder="Number 2"]'))
-//       .sendKeys("3");
-//     await driver.findElement(By.xpath('//button[text()="Calculate"]')).click();
-
-//     await driver.wait(
-//       until.elementLocated(By.xpath('//h2[text()="Result: 7"]')),
-//       5000
-//     );
-//     const resultElement = await driver.findElement(
-//       By.xpath('//h2[text()="Result: 7"]')
-//     );
-//     const resultText = await resultElement.getText();
-//     assert.strictEqual(resultText, "Result: 7");function add(a, b) {
-//   return a + b;
-// }
-
-// test('adds 1 + 2 to equal 3', () => {
-//   expect(add(1, 2)).toBe(3);
-// });
-//   } finally {
-//     await driver.quit();
-//   }
-// })();
+})
