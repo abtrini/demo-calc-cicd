@@ -1,13 +1,14 @@
 // This code uses the Selenium framework to perform the user interface aka Integration testing before final deployment
 const { Builder, By, Key, until } = require("selenium-webdriver");
 const assert = require("assert");
+
 jest.setTimeout(10000);
+
 describe("Calculator Integration Tests", () => {
   test("performs subtraction correctly", async () => {
      
 
-(async function testCalculatorSubtract() {
-  const driver = await new Builder().forBrowser("chrome").build();
+    const driver = await new Builder().forBrowser("chrome").build();
     try {
       await driver.get("https://learn-cicd-anthony-24f4f0f46557.herokuapp.com/"); // Replace with the actual URL of your React app
 
@@ -36,4 +37,7 @@ describe("Calculator Integration Tests", () => {
     }
   });
 });
-})
+
+
+
+
