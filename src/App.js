@@ -42,7 +42,7 @@ function App() {
     <div className="App">
       <h1>Simple Calculator Test</h1>
       <div>
-        <label htmlFor="Number 1">Number 1</label>
+        <label htmlFor="Number 1"> Number 1</label>
         <input
           type="text"
           id="Number 1"
