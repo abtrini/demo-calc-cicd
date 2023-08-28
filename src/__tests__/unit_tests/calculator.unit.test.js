@@ -17,7 +17,7 @@ test("renders calculator title", () => {
 
 test("performs addition correctly", () => {
   render(<App />);
-  const num1Input = screen.getByLabelText("Number 1") ; 
+  const num1Input = screen.getByLabelText("Number 1"); 
   const operatorSelect = screen.getByLabelText("Operator");
   const num2Input = screen.getByLabelText("Number 2");
   const calculateButton = screen.getByText("Calculate");
